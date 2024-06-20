@@ -47,7 +47,12 @@ namespace Warehouse_operationsAPPWPF.Pages
 
         private void Button_ClickInformation(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new InformationPage());
+            NavigationService.Navigate(new InformationPage()); 
+        }
+
+        private void Button_ClickDocuments(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ReceiptAndExpenseDocumentsPage());
         }
     }
 }

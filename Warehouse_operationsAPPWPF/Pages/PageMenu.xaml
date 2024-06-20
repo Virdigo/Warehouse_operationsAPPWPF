@@ -28,7 +28,9 @@
                 <Button Width="250" Height="80" Content="Просмотр остатков" Margin="10" Padding="10" FontSize="18" Background="#3b5998" Foreground="White" Style="{StaticResource ButtonStyle}" Click="Button_ClickOstatki"/>
                 <Button Width="250" Height="80" Content="Просмотр складов" Margin="10" Padding="10" FontSize="18" Background="#3b5998" Foreground="White" Style="{StaticResource ButtonStyle}" Click="Button_ClickWarehouse"/>
                 <Button Width="250" Height="80" Content="Просмотр поставщиков" Margin="10" Padding="10" FontSize="18" Background="#3b5998" Foreground="White" Style="{StaticResource ButtonStyle}" Click="Button_ClickSuppliers"/>
+                <Button Width="250" Height="80" Content="Просмотр документов" Margin="10" Padding="10" FontSize="18" Background="#3b5998" Foreground="White" Style="{StaticResource ButtonStyle}" Click="Button_ClickDocuments"/>
                 <Button Width="250" Height="80" Margin="10" Padding="10" FontSize="18" Background="#3b5998" Foreground="White" Style="{StaticResource ButtonStyle}" Click="Button_ClickInformation">
+                    
                     <Button.Content>
                         <TextBlock Text="Просмотр информации о документах" TextWrapping="Wrap" TextAlignment="Center"/>
                     </Button.Content>

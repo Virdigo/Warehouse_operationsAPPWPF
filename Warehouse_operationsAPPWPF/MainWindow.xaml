@@ -12,7 +12,12 @@
        
         <Frame Grid.Row="1" Name="MainFrame" NavigationUIVisibility="Hidden"/>
 
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" >
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right"  >
+            <Button x:Name="BtnMenu" Width="50" Height="50"  
+                 Click="BtnMenu_Click"
+                HorizontalAlignment="Right" Style="{StaticResource BorderlessButton}">
+                <Image Source="/Images/Menu.png" Stretch="Fill"/>
+            </Button>
 
             <Button x:Name="BtnMinimize" Width="18" Height="25"  Margin="11"
     Click="BtnMinimize_Click_1"

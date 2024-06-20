@@ -44,6 +44,11 @@ namespace Warehouse_operationsAPPWPF
         {
             Application.Current.Shutdown();
         }
+
+        private void BtnMenu_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new PageMenu());
+        }
     }
 }
 
