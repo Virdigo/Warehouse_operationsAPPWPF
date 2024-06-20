@@ -50,6 +50,7 @@ namespace Warehouse_operationsAPPWPF.Pages
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
+
         }
     }
 }

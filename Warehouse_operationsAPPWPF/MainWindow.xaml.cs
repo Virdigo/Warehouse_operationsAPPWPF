@@ -25,7 +25,7 @@ namespace Warehouse_operationsAPPWPF
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new PageMenu());
+            MainFrame.Navigate(new LoginPage());
         }
 
         private void BtnMinimize_Click_1(object sender, RoutedEventArgs e)
@@ -47,7 +47,13 @@ namespace Warehouse_operationsAPPWPF
 
         private void BtnMenu_Click(object sender, RoutedEventArgs e)
         {
+            if (MainFrame.Content is LoginPage)
+            {
+                MessageBox.Show("Сначала авторизируйтесь");
+            }
+            else { 
             MainFrame.Navigate(new PageMenu());
+            }
         }
     }
 }
