@@ -111,12 +111,12 @@ namespace Warehouse_operationsAPPWPF.Pages
 
         private void BtnArrowLeft_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new ReceiptAndExpenseDocumentsPage());
         }
 
         private void BtnArrowRight_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new ProductsPage());
         }
     }
 }

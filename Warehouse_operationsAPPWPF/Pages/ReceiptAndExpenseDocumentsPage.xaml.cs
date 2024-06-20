@@ -113,12 +113,12 @@ namespace Warehouse_operationsAPPWPF.Pages
 
         private void BtnArrowLeft_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new SuppliersPage());
         }
 
         private void BtnArrowRight_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new InformationPage());
         }
 
         private void excel_Click(object sender, RoutedEventArgs e)

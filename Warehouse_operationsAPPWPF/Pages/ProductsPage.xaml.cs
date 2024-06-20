@@ -121,7 +121,7 @@ namespace Warehouse_operationsAPPWPF.Pages
 
         private void BtnArrowLeft_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Information_about_documents());
         }
     }
 }
