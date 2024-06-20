@@ -25,7 +25,7 @@ namespace Warehouse_operationsAPPWPF
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new LoginPage());
+            MainFrame.Navigate(new PageMenu());
         }
 
         private void BtnMinimize_Click_1(object sender, RoutedEventArgs e)

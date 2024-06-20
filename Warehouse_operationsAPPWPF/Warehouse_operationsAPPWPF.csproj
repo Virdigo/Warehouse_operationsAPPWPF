@@ -112,14 +112,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Information_about_documents.cs" />
     <Compile Include="Models\LoginDto.cs" />
     <Compile Include="Models\Ostatki.cs" />
+    <Compile Include="Models\Suppliers.cs" />
     <Compile Include="Models\Users.cs" />
+    <Compile Include="Models\Warehouses.cs" />
+    <Compile Include="Pages\AddInformationPage.xaml.cs">
+      <DependentUpon>AddInformationPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AddOstatkiPage.xaml.cs">
       <DependentUpon>AddOstatkiPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AddProductPage.xaml.cs">
       <DependentUpon>AddProductPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddSuppliersPage.xaml.cs">
+      <DependentUpon>AddSuppliersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddWarehousePage.xaml.cs">
+      <DependentUpon>AddWarehousePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InformationPage.xaml.cs">
+      <DependentUpon>InformationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -127,12 +142,24 @@
     <Compile Include="Pages\OstatkiPage.xaml.cs">
       <DependentUpon>OstatkiPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PageMenu.xaml.cs">
+      <DependentUpon>PageMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ProductsPage.xaml.cs">
       <DependentUpon>ProductsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\SuppliersPage.xaml.cs">
+      <DependentUpon>SuppliersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WarehousePage.xaml.cs">
+      <DependentUpon>WarehousePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ApiServiceInformation.cs" />
     <Compile Include="Services\ApiServiceLogin.cs" />
     <Compile Include="Services\ApiServiceOstatki.cs" />
     <Compile Include="Services\ApiServiceProduct.cs" />
+    <Compile Include="Services\ApiServiceSuppliers.cs" />
+    <Compile Include="Services\ApiServiceWarehouses.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -145,11 +172,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AddInformationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AddOstatkiPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\AddProductPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AddSuppliersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AddWarehousePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\InformationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -161,7 +204,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ProductsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SuppliersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\WarehousePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -195,19 +250,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\ArrowRight.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\ArrowLeft.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\close.png" />
     <Resource Include="Images\line.png" />
     <Resource Include="Images\min.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Images\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ArrowRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ArrowLeft.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />

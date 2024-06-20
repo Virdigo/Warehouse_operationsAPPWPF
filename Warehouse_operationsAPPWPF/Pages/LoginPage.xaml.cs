@@ -39,7 +39,7 @@ namespace Warehouse_operationsAPPWPF.Pages
                 var user = await _apiService.AuthenticateAsync(login, password);
                 if (user != null)
                 {
-                    NavigationService.Navigate(new ProductsPage());
+                    NavigationService.Navigate(new PageMenu());
                 }
                 else
                 {

@@ -33,6 +33,34 @@
                     </Setter.Value>
                 </Setter>
             </Style>
+
+                <Style x:Key="ButtonStyle" TargetType="Button">
+                    <Setter Property="FontFamily" Value="Segoe UI"/>
+                    <Setter Property="FontSize" Value="18"/>
+                    <Setter Property="Margin" Value="0,10,0,10"/>
+                    <Setter Property="Padding" Value="10,10"/>
+                    <Setter Property="Background" Value="#3b5998"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect Color="Black" BlurRadius="5"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#4c70ba"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#2d4373"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

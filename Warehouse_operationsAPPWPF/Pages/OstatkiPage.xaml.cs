@@ -169,7 +169,7 @@ namespace Warehouse_operationsAPPWPF.Pages
 
             OstatkiApplicationPDF.Visible = true;
 
-            document.SaveAs2(@"C:\Users\bpvla\Desktop\Новая папка (2)\Warehouse_operationsAPPWPF-master\Warehouse_operationsAPPWPF\bin\Debug\Ostatki.pdf", Word.WdExportFormat.wdExportFormatPDF);
+            document.SaveAs2(@"C:\Users\bpvla\Desktop\Проект в авторизацей\Warehouse_operationsAPPWPF-master\Warehouse_operationsAPPWPF\bin\Debug\Ostatki.pdf", Word.WdExportFormat.wdExportFormatPDF);
         }
 
         private void excel_Click(object sender, RoutedEventArgs e)
@@ -205,6 +205,16 @@ namespace Warehouse_operationsAPPWPF.Pages
             range.HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
 
             ExcelApp.Visible = true;
+        }
+
+        private void BtnArrowLeft_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnArrowRight_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -1,0 +1,54 @@
+﻿<Page x:Class="Warehouse_operationsAPPWPF.Pages.WarehousePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Warehouse_operationsAPPWPF.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="1250"
+      Title="WarehousePage">
+
+    <Grid Background="#3b5998">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button Name="BtnArrowLeft" Width="50" Height="50" HorizontalAlignment="Right" 
+                    Click="BtnArrowLeft_Click" Style="{StaticResource BorderlessButton}">
+                <Image Source="/Images/ArrowLeft.png" Stretch="Fill"/>
+            </Button>
+            <Button Name="BtnArrowRight" Width="50" Height="50" HorizontalAlignment="Right" 
+                    Click="BtnArrowRight_Click" Style="{StaticResource BorderlessButton}">
+                <Image Source="/Images/ArrowRight.png" Stretch="Fill"/>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Margin="10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                <Label Content="Фильтр по наименованию" FontSize="28" FontWeight="Bold" Foreground="White"/>
+                <TextBox Name="NameFilterTextBox" Width="200" Margin="5,0"/>
+                <Label Content="Адрес" FontSize="28" FontWeight="Bold" Foreground="White"/>
+                <TextBox Name="AddressFilterTextBox" Width="200" Margin="5,0"/>
+                <Button Content="Выполнить" Click="FilterButton_Click" Margin="5,0" Background="White"/>
+            </StackPanel>
+            <ListView Name="WarehousesListView" Height="300" Margin="0,10,0,0">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding id_warehouses}" Width="70"/>
+                        <GridViewColumn Header="Наименование" DisplayMemberBinding="{Binding Name}" Width="200"/>
+                        <GridViewColumn Header="Адрес" DisplayMemberBinding="{Binding address}" Width="300"/>
+                        <GridViewColumn Header="ID Пользователя" DisplayMemberBinding="{Binding id_users}" Width="100"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                <Button Content="Добавить склад" Click="AddWarehouseButton_Click" Margin="5,0" Background="White"/>
+                <Button Content="Редактировать склад" Click="EditWarehouseButton_Click" Margin="5,0" Background="White"/>
+                <Button Content="Удалить склад" Click="DeleteWarehouseButton_Click" Margin="5,0" Background="White"/>
+                <Button Content="Обновить страницу" Click="LoadWarehouses_Click" Margin="5,0" Background="White"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
