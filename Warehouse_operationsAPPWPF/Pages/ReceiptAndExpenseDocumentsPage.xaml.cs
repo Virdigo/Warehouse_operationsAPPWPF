@@ -50,24 +50,28 @@ namespace Warehouse_operationsAPPWPF.Pages
             }
         }
 
-        //private void FilterButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    var filteredWarehouses = _allWarehouses.AsEnumerable();
+        private void FilterButton_Click(object sender, RoutedEventArgs e)
+        {
+            var filteredProducts = _allReceiptAndExpenseDocuments.AsEnumerable();
 
-        //    if (!string.IsNullOrWhiteSpace(NameFilterTextBox.Text))
-        //    {
-        //        var filterText = NameFilterTextBox.Text.ToLowerInvariant();
-        //        filteredWarehouses = filteredWarehouses.Where(p => p.Name.ToLowerInvariant().Contains(filterText));
-        //    }
+           
 
-        //    if (!string.IsNullOrWhiteSpace(AddressFilterTextBox.Text))
-        //    {
-        //        var filterText = AddressFilterTextBox.Text.ToLowerInvariant();
-        //        filteredWarehouses = filteredWarehouses.Where(p => p.address.ToLowerInvariant().Contains(filterText));
-        //    }
+            // Фильтр по дате
+            if (StartDatePicker.SelectedDate.HasValue)
+            {
+                var startDate = StartDatePicker.SelectedDate.Value;
+                filteredProducts = filteredProducts.Where(p => p.date >= startDate);
+            }
 
-        //    WarehousesListView.ItemsSource = filteredWarehouses.ToList();
-        //}
+            if (EndDatePicker.SelectedDate.HasValue)
+            {
+                var endDate = EndDatePicker.SelectedDate.Value;
+                filteredProducts = filteredProducts.Where(p => p.date <= endDate);
+            }
+
+            // Обновление ListView
+            DocumentsListView.ItemsSource = filteredProducts.ToList();
+        }
 
         private void AddDocumentsButton_Click(object sender, RoutedEventArgs e)
         {
